@@ -1,5 +1,5 @@
 {
     "name": "Workshop",
-    "image": "mcr.microsoft.com/devcontainers/universal:linux",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
     "postCreateCommand": "./install.sh"
 }
