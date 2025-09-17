@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# Setup Brew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
 
+# Install everything
 brew install trivy
 brew tap interlynk-io/interlynk
 brew install sbomasm sbomqs
@@ -15,10 +19,3 @@ curl -o /home/linuxbrew/.linuxbrew/bin/bnd -L https://github.com/carabiner-dev/b
 chmod 0755 /home/linuxbrew/.linuxbrew/bin/bnd
 curl -o /home/linuxbrew/.linuxbrew/bin/unpack -L https://github.com/carabiner-dev/unpack/releases/download/v0.1.0-pre5/unpack-v0.1.0-pre5-linux-amd64
 chmod 0755 /home/linuxbrew/.linuxbrew/bin/unpack
-
-docker run -d -p 5000:5000 --name oras-quickstart ghcr.io/project-zot/zot-linux-amd64:latest
-brew install oras
-gp ports await 5000
-url="$(gp url 5000)"
-export BOMCTL_PORT_URL="${url#*://}"
-oras push ${BOMCTL_PORT_URL}/hello-bomctl:v0.0.0 examples/bomctl_0.1.1_darwin_arm64.tar.gz.cdx.json

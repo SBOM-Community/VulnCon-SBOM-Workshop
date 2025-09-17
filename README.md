@@ -1,6 +1,6 @@
 # VulnCon-SBOM-Workshop
 
-This repo creates a [Gitpod Environment](https://gitpod.io/?autostart=true&useLatest=true#https://github.com/SBOM-Community/VulnCon-SBOM-Workshop) for the follow along workshop for [Practical Software Bill of Materials: From Generation to Distribution Workshop](https://docs.google.com/presentation/d/1v0QT48iHWxNUJ4j3b0hyVp2zG25h60CK7PhVOUeexMc/edit?usp=sharing) at VulnCon 2025
+This repo creates a [CodeSpace Environment](https://gitpod.io/?autostart=true&useLatest=true#https://github.com/SBOM-Community/VulnCon-SBOM-Workshop) for the follow along workshop for [Practical Software Bill of Materials: From Generation to Distribution Workshop](https://docs.google.com/presentation/d/1v0QT48iHWxNUJ4j3b0hyVp2zG25h60CK7PhVOUeexMc/edit?usp=sharing) at VulnCon 2025
 
 ## Getting Started
 
@@ -299,21 +299,6 @@ Convert between SBOM formats:
 ``` bash
 bomctl export -f cyclonedx https://anchore.com/syft/file/bomctl_0.3.0_linux_amd64.tar.gz-1b838d44-9d3c-47d0-9f7f-846397e701fa#DOCUMENT
 ```
-
-Lets list one of the two SBOMs that we have fetched into a OCI Registry:
-
-``` bash
-# Get the URL and port of the OCI registry running in Gitpod
-url="$(gp url 5000)"
-export BOMCTL_PORT_URL="${url#*://}"
-
-# Push the SBOM to the OCI registry and convert to SPDX format
-bomctl push -f spdx urn:uuid:f360ad8b-dc41-4256-afed-337a04dff5db oci://${BOMCTL_PORT_URL}/hello-bomctl:latest
-```
-
-This will push the SBOM to the OCI registry and convert it to SPDX format.
-
-You can view the layers in Zot, the OCI registry running in Gitpod, by clicking on the "PORTS" tab (next to the "TERMINAL" tab) and then clicking on the "Address" next to the port 5000.
 
 ## SBOM Operations
 
