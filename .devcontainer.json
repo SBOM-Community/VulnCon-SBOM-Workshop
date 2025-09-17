@@ -1,0 +1,5 @@
+{
+    "name": "Workshop",
+    "image": "mcr.microsoft.com/devcontainers/universal:linux",
+    "postCreateCommand": "./install.sh"
+}
