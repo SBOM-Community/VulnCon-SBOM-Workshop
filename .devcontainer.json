@@ -1,5 +1,8 @@
 {
     "name": "Workshop",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+    "remoteEnv": {
+        "PATH": "${containerEnv:PATH}:/home/linuxbrew/.linuxbrew/bin/"
+    },
     "postCreateCommand": "./install.sh"
 }

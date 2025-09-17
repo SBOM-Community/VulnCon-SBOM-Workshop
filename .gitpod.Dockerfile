@@ -1,1 +1,0 @@
-FROM gitpod/workspace-full:2025-04-02-11-00-56

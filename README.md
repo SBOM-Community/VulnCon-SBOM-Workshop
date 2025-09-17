@@ -1,16 +1,16 @@
 # VulnCon-SBOM-Workshop
 
-This repo creates a [CodeSpace Environment](https://gitpod.io/?autostart=true&useLatest=true#https://github.com/SBOM-Community/VulnCon-SBOM-Workshop) for the follow along workshop for [Practical Software Bill of Materials: From Generation to Distribution Workshop](https://docs.google.com/presentation/d/1v0QT48iHWxNUJ4j3b0hyVp2zG25h60CK7PhVOUeexMc/edit?usp=sharing) at VulnCon 2025
+This repo creates a [Codespaces Environment](https://codespaces.new/SBOM-Community/VulnCon-SBOM-Workshop) for the follow along workshop for [Practical Software Bill of Materials: From Generation to Distribution Workshop](https://docs.google.com/presentation/d/1v0QT48iHWxNUJ4j3b0hyVp2zG25h60CK7PhVOUeexMc/edit?usp=sharing) at VulnCon 2025
 
 ## Getting Started
 
 To help you get started, we have created a Gitpod environment that has all the tools you need to complete the workshop. To get started, click the link below to start the Gitpod environment.
 
-- [Start Gitpod Environment](https://gitpod.io/?autostart=true&useLatest=true#https://github.com/SBOM-Community/VulnCon-SBOM-Workshop) __<-- Start Here__
+- [Start Codespaces Environment](https://codespaces.new/SBOM-Community/VulnCon-SBOM-Workshop) __<-- Start Here__
 
 Alternatively you can install all of these tools and follow along with this README.md file.
 
-__No need to execute this in your Gitpod environment.__
+__No need to execute this in your Codespaces environment, `install.sh` will be called for you that contains these commands.__
 
 ``` bash
 # Install Trivy for SBOM generation
